@@ -22,7 +22,7 @@ docker run \
   --cap-add NET_ADMIN \
   --cap-add SYS_PTRACE \
   -ti
-  janoszen/debug
+  csana/debug
 ```
 
 You are now in a container that has more privileges than your normal running container (you can strace, etc) but sees
