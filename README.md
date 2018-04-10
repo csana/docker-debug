@@ -21,6 +21,7 @@ docker run \
   --cap-add NET_RAW \
   --cap-add NET_ADMIN \
   --cap-add SYS_PTRACE \
+  --rm \
   -ti
   csana/debug
 ```
