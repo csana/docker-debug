@@ -25,7 +25,8 @@ docker run \
   -ti
   csana/docker-debug
 ```
-or I usualy create a bash function:
+
+or I usually using it as a bash function:
 
 ```
 docker-debug() { docker run \
