@@ -23,9 +23,25 @@ docker run \
   --cap-add SYS_PTRACE \
   --rm \
   -ti
-  csana/debug
+  csana/docker-debug
 ```
+or I usualy create a bash function:
 
+```
+docker-debug() { docker run \
+  --pid container:$1 \
+  --net container:$1 \
+  --cap-add NET_RAW \
+  --cap-add NET_ADMIN \
+  --cap-add SYS_PTRACE \
+  --rm \
+  -ti \
+  csana/docker-debug; } 
+```
+then simply use:
+```
+docker-debug containerID
+```
 You are now in a container that has more privileges than your normal running container (you can strace, etc) but sees
 the same processes and network interface as the container you wish to debug.
 
